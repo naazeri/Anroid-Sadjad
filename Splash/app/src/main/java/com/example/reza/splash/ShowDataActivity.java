@@ -28,4 +28,5 @@ public class ShowDataActivity extends AppCompatActivity {
         name_textView.setText(name);
         family_textView.setText(family);
     }
+
 }

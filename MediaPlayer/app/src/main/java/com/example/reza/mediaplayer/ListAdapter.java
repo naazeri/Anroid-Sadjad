@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
@@ -15,22 +16,22 @@ public class ListAdapter extends BaseAdapter {
 
     private Context context;
     private static LayoutInflater inflater;
-    private List<String> stringList;
+    private List<Item> items;
 
-    public ListAdapter(Context context, List<String> stringList) {
+    public ListAdapter(Context context, List<Item> items) {
         this.context = context;
-        this.stringList = stringList;
+        this.items = items;
         inflater = ( LayoutInflater )context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
     @Override
     public int getCount() {
-        return stringList.size();
+        return items.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return stringList.get(position);
+        return items.get(position);
     }
 
     @Override
@@ -46,19 +47,20 @@ public class ListAdapter extends BaseAdapter {
         if (convertView == null) {
             view = inflater.inflate(R.layout.list_row, null);
             holder = new ViewHolder();
-            holder.textView = (TextView) view.findViewById(R.id.list_row_textView_text);
+            holder.musicName = (TextView) view.findViewById(R.id.list_row_textView_text);
             view.setTag(holder);
         }
         else {
             holder = (ViewHolder) view.getTag();
         }
 
-        holder.textView.setText(stringList.get(position));
+//        holder.musicName.setText(items.get(position));
 
         return view;
     }
 
     public static class ViewHolder {
-        public TextView textView;
+        public TextView musicName;
+        public ImageView musicImage;
     }
 }

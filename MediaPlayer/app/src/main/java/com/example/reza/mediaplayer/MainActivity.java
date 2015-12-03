@@ -1,14 +1,13 @@
 package com.example.reza.mediaplayer;
 
+import android.app.ActionBar;
+import android.content.Intent;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,30 +16,27 @@ public class MainActivity extends AppCompatActivity {
 //    MediaPlayer mediaPlayer;
 //    Handler handler;
 //    Runnable runnable;
-    static ListView list;
+    ListView list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        final ActionBar actionBar = getActionBar();
+        BitmapDrawable background = new BitmapDrawable(BitmapFactory.decodeResource(getResources(), R.drawable.image1));
+        background.setTileModeX(android.graphics.Shader.TileMode.REPEAT);
+        actionBar.setBackgroundDrawable(background);
 
-
-        try {
-            List<String> stringList = new ArrayList<>();
-            stringList.add("مشهد");
-            stringList.add("تهران");
-            stringList.add("نیشابور");
-            stringList.add("اصفهان");
-            stringList.add("یزد");
-
-            list = (ListView) findViewById(R.id.listView);
-            ListAdapter adapter = new ListAdapter(MainActivity.this, stringList);
-            list.setAdapter(adapter);
-        } catch (Exception e) {
-            e.printStackTrace();
-            Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show();
-        }
+//        try {
+//            DataManager dataManager = new DataManager();
+//            list = (ListView) findViewById(R.id.listView);
+//            ListAdapter adapter = new ListAdapter(MainActivity.this, dataManager.getItems());
+//            list.setAdapter(adapter);
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//            Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show();
+//        }
 
 
 //        playButton = (Button) findViewById(R.id.button2);
@@ -67,9 +63,9 @@ public class MainActivity extends AppCompatActivity {
 //        };
 //
 //        handler.postDelayed(runnable, 300);
-
+//
     }
-
+//
 //    @Override
 //    protected void onPause() {
 //        super.onPause();

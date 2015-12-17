@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/list_row_textView_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="text"
-        android:layout_gravity="center"
-        android:textSize="30sp"
-        android:layout_marginTop="20dp"
-        android:layout_alignParentRight="true"
-        android:textColor="#000"/>
-
     <ImageView
+        android:id="@+id/list_row_imageView_musicImage"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:background="@mipmap/ic_launcher"
-        android:layout_alignParentLeft="true"/>
+        android:background="@mipmap/ic_launcher" />
 
-</RelativeLayout>
+    <TextView
+        android:id="@+id/list_row_textView_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="text"
+        android:layout_gravity="right"
+        android:textSize="30sp"
+        android:layout_marginTop="20dp"
+        android:textColor="#000"/>
+
+</LinearLayout>

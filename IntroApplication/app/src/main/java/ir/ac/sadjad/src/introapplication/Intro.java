@@ -5,6 +5,9 @@ import android.os.Bundle;
 
 import com.github.paolorotolo.appintro.AppIntro;
 import com.github.paolorotolo.appintro.AppIntroFragment;
+import com.orhanobut.hawk.Hawk;
+import com.orhanobut.hawk.HawkBuilder;
+import com.orhanobut.hawk.LogLevel;
 
 public class Intro extends AppIntro {
     @Override
@@ -16,12 +19,26 @@ public class Intro extends AppIntro {
 
     @Override
     public void onSkipPressed() {
-
+        Hawk.init(this)
+                .setEncryptionMethod(HawkBuilder.EncryptionMethod.MEDIUM)
+                .setPassword("password")
+                .setStorage(HawkBuilder.newSharedPrefStorage(this))
+                .setLogLevel(LogLevel.NONE)
+                .build();
+        Hawk.put("showIntro", false);
+        onBackPressed();
     }
 
     @Override
     public void onDonePressed() {
-
+        Hawk.init(this)
+                .setEncryptionMethod(HawkBuilder.EncryptionMethod.MEDIUM)
+                .setPassword("password")
+                .setStorage(HawkBuilder.newSharedPrefStorage(this))
+                .setLogLevel(LogLevel.NONE)
+                .build();
+        Hawk.put("showIntro", false);
+        onBackPressed();
     }
 
     @Override

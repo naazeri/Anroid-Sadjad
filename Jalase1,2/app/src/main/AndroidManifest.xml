@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="ir.ac.sadjad.src.introapplication">
+    package="ir.ac.sadjad.project1">
 
     <application
         android:allowBackup="true"
@@ -14,7 +14,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="ir.ac.sadjad.src.introapplication.Intro" />
     </application>
 
 </manifest>

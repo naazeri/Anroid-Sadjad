@@ -55,7 +55,6 @@ public class PlayerActivity extends AppCompatActivity {
         };
 
         handler.postDelayed(runnable, 300);
-
     }
 
     @Override

@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void showIntro() {
         try {
-            Hawk.init(MainActivity.this)
+            Hawk.init(this)
                     .setEncryptionMethod(HawkBuilder.EncryptionMethod.MEDIUM)
                     .setPassword("password")
                     .setStorage(HawkBuilder.newSharedPrefStorage(this))

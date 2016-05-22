@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MusicPlayer</string>
+    <string name="sampleText">رنگ متن نمونه</string>
+    <string name="hintText">متن راهنما</string>
+    <string name="apply">اعمال</string>
+    <string name="clear">پاک </string>
+    <string name="pic1">عکس۱</string>
+    <string name="pic2">عکس۲</string>
+    <string name="pic3">عکس۳</string>
+    <string name="play">پخش</string>
+    <string name="pause">مکث</string>
+    <string name="errorInLoadData">خطا در بارگذاری اطلاعات</string>
+</resources>

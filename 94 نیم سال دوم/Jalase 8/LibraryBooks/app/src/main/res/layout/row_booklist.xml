@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:orientation="horizontal">
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight=".5"/>
+
+    <TextView
+        android:id="@+id/bookList_textView_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="23sp"
+        android:text="تعداد کتاب"
+        android:textColor="#000" />
+    <TextView
+        android:id="@+id/bookList_textView_bookName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:gravity="center"
+        android:textSize="32sp"
+        android:text="نام کتاب"
+        android:textColor="#000" />
+</LinearLayout>

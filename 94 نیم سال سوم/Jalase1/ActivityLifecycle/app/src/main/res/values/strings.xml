@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ActivityLifecycle</string>
+    <string name="pageTwo">صفحه دوم</string>
+    <string name="showNextPage">نمایش صفحه بعد</string>
+</resources>

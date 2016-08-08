@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/main_textView_output"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="نتیجه"
+        android:layout_marginTop="20dp"
+        android:textColor="#000000"
+        android:textSize="35sp" />
+
+    <EditText
+        android:id="@+id/main_editText_input"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:hint="ورودی" />
+
+    <Button
+        android:id="@+id/main_button_apply"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center"
+        android:text="ارسال"
+        android:textSize="30sp" />
+</LinearLayout>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Material01</string>
+    <string name="main_activity_label">سلام</string>
+    <string name="action_settings">Settings</string>
+</resources>
